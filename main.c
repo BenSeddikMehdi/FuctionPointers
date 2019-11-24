@@ -1,16 +1,5 @@
 #include <stdio.h>
-
-typedef int (*operation_ptr) (int, int);
-
-int add(int a, int b) { return a + b;}
-int multiply(int a, int b) { return a * b;}
-
-int do_operation(int (*op)(int, int), int x, int y) {
-    return op(x, y);
-}
-int do_ptr(operation_ptr op_ptr, int x, int y) {
-    return op_ptr(x, y);
-}
+#include "FunctionPointers.h"
 
 int main() {
     int a = do_operation(add, 5, 6);

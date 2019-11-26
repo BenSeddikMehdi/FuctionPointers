@@ -16,4 +16,5 @@ int do_operation(int (*op)(int, int), int x, int y) {
 int do_ptr(operation_ptr op_ptr, int x, int y) {
     return op_ptr(x, y);
 }
+int externVar = 12;
 #endif //FUCTIONPOINTERS_FUNCTIONPOINTERS_H

@@ -18,15 +18,31 @@ int do_operation(int (*op)(int, int), int x, int y) {
 int do_ptr(operation_ptr op_ptr, int x, int y) {
     return op_ptr(x, y);
 }
-uint32_t do_test(uint32_t octet, uint32_t (*op) (uint32_t, char[8]), char hex[8]) {
+uint32_t do_test(uint32_t octet, uint32_t (*op) (uint32_t, char[9]), char hex[9]) {
     return op(octet, hex);
 }
 
-uint32_t test(uint32_t octet, char hex[8]) {
-    uint32_t i = 0;
-    while (octet > 16) {
-        hex[7-i] = octet % 16;
+uint32_t test(uint32_t octet, char hex[9]) {
+    uint32_t i = 0, temp;
+    while (i < 8) {
+        temp = octet % 16;
+        if (temp == 10)
+            hex[7-i] = 'A';
+        else if (temp == 11)
+            hex[7-i] = 'B';
+        else if (temp == 12)
+            hex[7-i] = 'C';
+        else if (temp == 13)
+            hex[7-i] = 'D';
+        else if (temp == 14)
+            hex[7-i] = 'E';
+        else if (temp == 15)
+            hex[7-i] = 'F';
+        else
+            hex[7-i] = (char) (temp + '0');
         octet /= 16;
+        i++;
     }
+    hex[i] = '\0';
     return 0;
 }

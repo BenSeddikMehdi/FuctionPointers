@@ -3,4 +3,4 @@ project(FuctionPointers C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(FuctionPointers main.c FunctionPointers.h)
+add_executable(FuctionPointers main.c FunctionPointers.h Function_Pointers.c Function_Pointers.h)

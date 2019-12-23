@@ -18,12 +18,12 @@ int do_operation(int (*op)(int, int), int x, int y) {
 int do_ptr(operation_ptr op_ptr, int x, int y) {
     return op_ptr(x, y);
 }
-uint32_t do_test(uint32_t octet, uint32_t (*op) (uint32_t, char[9]), char hex[9]) {
+uint32_t do_test(uint32_t (*op) (uint32_t, char[9]), uint32_t octet, char hex[9]) {
     return op(octet, hex);
 }
 
 uint32_t test(uint32_t octet, char hex[9]) {
-    uint32_t i = 0, temp;
+    uint32_t i = 0, temp = 0;
     while (i < 8) {
         temp = octet % 16;
         if (temp == 10)

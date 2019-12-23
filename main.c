@@ -1,11 +1,10 @@
 #include <stdio.h>
+#include <stdint.h>
 #include "Function_Pointers.h"
 
 int main() {
-    char hexTab[8] = "";
-    do_test(23, test, hexTab);
-    printf("hexTab = %s ", hexTab);
-
-
+    char hexTab[9] = "";
+    do_test(test, 321432, hexTab);
+    printf("hexTab = 0x%s ", hexTab);
     return 0;
 }

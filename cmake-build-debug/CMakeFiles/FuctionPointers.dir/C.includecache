@@ -6,16 +6,12 @@
 
 #IncludeRegexTransform: 
 
-D:/MATLAB_Drive/2019_12_09_JacobSorber/FuctionPointers/Function_Pointers.c
-stdint-gcc.h
--
-Function_Pointers.h
-D:/MATLAB_Drive/2019_12_09_JacobSorber/FuctionPointers/Function_Pointers.h
-
 D:/MATLAB_Drive/2019_12_09_JacobSorber/FuctionPointers/Function_Pointers.h
 
 D:/MATLAB_Drive/2019_12_09_JacobSorber/FuctionPointers/main.c
 stdio.h
+-
+stdint.h
 -
 Function_Pointers.h
 D:/MATLAB_Drive/2019_12_09_JacobSorber/FuctionPointers/Function_Pointers.h

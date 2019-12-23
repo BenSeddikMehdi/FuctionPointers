@@ -4,8 +4,6 @@
 
 #include "Function_Pointers.h"
 
-typedef int (*operation_ptr) (int, int);
-
 int add(int a, int b) {
     return a + b;
 }
